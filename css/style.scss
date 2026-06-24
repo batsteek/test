@@ -1,0 +1,87 @@
+$primary-color: #382db4; // Pinegrow Green
+$secondary-color: #3b1e36;
+$bg-color: #f8fafc;
+$text-color: #334155;
+$white: #ffffff;
+$border-radius: 8px;
+$shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+
+body {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    background-color: $bg-color;
+    color: $text-color;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.header {
+    background-color: $secondary-color;
+    color: $white;
+    padding: 3rem 0;
+    text-align: center;
+    border-bottom: 4px solid $primary-color;
+
+    h1 {
+        margin: 0;
+        font-size: 2.5rem;
+    }
+
+    p {
+        font-size: 1.2rem;
+        opacity: 0.9;
+    }
+}
+
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.card {
+    background: $white;
+    padding: 2rem;
+    border-radius: $border-radius;
+    box-shadow: $shadow;
+    border: 1px solid #e2e8f0;
+    transition: transform 0.2s ease;
+
+    &:hover {
+        transform: translateY(-5px);
+    }
+
+    h3 {
+        color: $primary-color;
+        margin-top: 0;
+    }
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: $primary-color;
+    color: white;
+    padding: 0.8rem 1.5rem;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    margin-top: 2rem;
+    transition: background-color 0.2s;
+
+    &:hover {
+        background-color: darken($primary-color, 10%);
+    }
+}
+
+footer {
+    text-align: center;
+    padding: 4rem 0;
+    font-size: 0.9rem;
+    color: #64748b;
+}
